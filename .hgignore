@@ -1,0 +1,9 @@
+# Remove some patch or backup files from SCM
+syntax:regexp
+
+syntax:glob
+.gradle/
+
+*.iml
+*.ipr
+*.iws

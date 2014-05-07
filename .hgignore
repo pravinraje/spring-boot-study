@@ -2,8 +2,9 @@
 syntax:regexp
 
 syntax:glob
-.gradle/
 
-*.iml
+.gradle/
+build/
+
 *.ipr
 *.iws

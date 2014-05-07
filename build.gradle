@@ -9,7 +9,8 @@
 
 buildscript{
     ext{
-        springBootVersion = '1.1.0.BUILD-SNAPSHOT'
+//        springBootVersion = '1.1.0.BUILD-SNAPSHOT'
+        springBootVersion = '1.0.2.RELEASE'
     }
     repositories {
         maven { url "http://repo.spring.io/release" }
@@ -24,6 +25,7 @@ buildscript{
 
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
+apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
 
@@ -55,9 +57,14 @@ dependencies {
     compile "org.springframework:spring-messaging"
 
     compile "org.springframework.boot:spring-boot-starter-actuator"
-    compile "org.springframework.boot:spring-boot-starter-freemarker"
+    compile "org.springframework.boot:spring-boot-starter-freemarker:1.1.0.BUILD-SNAPSHOT"
     compile "org.springframework.boot:spring-boot-starter-security"
+
+    compile 'org.grails:gorm-hibernate4-spring-boot:1.0.0.RC3'
+
     compile "org.jolokia:jolokia-core"
+
+    runtime "com.h2database:h2:1.3.174"
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
     // TestNG is also supported by the Gradle Test task. Just change the

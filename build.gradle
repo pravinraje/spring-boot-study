@@ -13,10 +13,11 @@ buildscript{
         springBootVersion = '1.0.2.RELEASE'
     }
     repositories {
-        maven { url "http://repo.spring.io/release" }
+        mavenLocal()
+		mavenCentral()
+		maven { url "http://repo.spring.io/release" }
         maven { url "http://repo.spring.io/milestone" }
         maven { url "http://repo.spring.io/snapshot" }
-        mavenLocal()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -61,6 +62,9 @@ dependencies {
     compile "org.springframework.boot:spring-boot-starter-security"
 
     compile 'org.grails:gorm-hibernate4-spring-boot:1.0.0.RC3'
+
+//    compile "com.fasterxml.jackson.core:jackson-databind"
+    compile "org.springframework.boot:spring-boot-starter-remote-shell"
 
     compile "org.jolokia:jolokia-core"
 

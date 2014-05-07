@@ -4,7 +4,7 @@
 <head>
     <title>Error</title>
 <#assign home><@spring.url relativeUrl="/"/></#assign>
-<#assign bootstrap><@spring.url relativeUrl="/css/bootstrap.min.css"/></#assign>
+<#assign bootstrap><@spring.url relativeUrl="/css/bootstrap.css"/></#assign>
     <link rel="stylesheet" href="${bootstrap}" />
 </head>
 <body>

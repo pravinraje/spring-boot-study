@@ -61,7 +61,7 @@ public class SampleActuatorUIApplicationTests {
     @Test
     public void testCss() throws Exception {
         ResponseEntity<String> entity = new TestRestTemplate().getForEntity(
-                "http://localhost:" + this.port + "/css/bootstrap.min.css", String.class);
+                "http://localhost:" + this.port + "/css/bootstrap.css", String.class);
         assertEquals(HttpStatus.OK, entity.getStatusCode());
         assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("body"));
     }
@@ -81,14 +81,10 @@ public class SampleActuatorUIApplicationTests {
         ResponseEntity<String> entity = new TestRestTemplate().exchange(
                 "http://localhost:" + this.port + "/error", HttpMethod.GET,
                 new HttpEntity<Void>(headers), String.class);
+
         assertEquals(HttpStatus.OK, entity.getStatusCode());
-        assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody()
-                .contains("<html>"));
-        assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody()
-                .contains("<body>"));
-        assertTrue(
-                "Wrong body:\n" + entity.getBody(),
-                entity.getBody().contains(
-                        "Please contact the operator with the above information"));
+        assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("<html>"));
+        assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("<body>"));
+        assertTrue("Wrong body:\n" + entity.getBody(), entity.getBody().contains("Please contact the operator with the above information"));
     }
 }

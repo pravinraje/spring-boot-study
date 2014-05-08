@@ -31,8 +31,8 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import java.util.Arrays;
 import java.util.Map;
 
-import static junit.framework.Assert.assertTrue;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = Application.class)

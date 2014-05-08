@@ -3,8 +3,8 @@ package com.alcatel.hello.domain
 import grails.persistence.Entity
 
 /**
- * Created by guoshunw on 2014/5/7.
- */
+* Created by guoshunw on 2014/5/7.
+*/
 
 @Entity
 class Person {

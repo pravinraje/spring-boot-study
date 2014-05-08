@@ -63,7 +63,7 @@ dependencies {
 
     compile 'org.grails:gorm-hibernate4-spring-boot:1.0.0.RC3'
 
-//    compile "com.fasterxml.jackson.core:jackson-databind"
+    compile "com.fasterxml.jackson.core:jackson-databind"
     compile "org.springframework.boot:spring-boot-starter-remote-shell"
 
     compile "org.jolokia:jolokia-core"

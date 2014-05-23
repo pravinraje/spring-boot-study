@@ -10,6 +10,7 @@ import org.springframework.messaging.handler.annotation.MessageMapping
 import org.springframework.messaging.handler.annotation.SendTo
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.servlet.HandlerMapping
 
 import static java.util.concurrent.TimeUnit.SECONDS
 import static org.springframework.http.HttpStatus.BAD_REQUEST

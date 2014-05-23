@@ -5,6 +5,8 @@ syntax:glob
 
 .gradle/
 build/
+*.map
+
 
 *.ipr
 *.iws

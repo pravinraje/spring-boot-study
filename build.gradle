@@ -59,6 +59,7 @@ dependencies {
 
     compile "org.springframework.boot:spring-boot-starter-actuator"
     compile "org.springframework.boot:spring-boot-starter-freemarker:1.1.0.BUILD-SNAPSHOT"
+//    compile "org.apache.velocity:velocity:1.7"
     compile "org.springframework.boot:spring-boot-starter-security"
 
     compile 'org.grails:gorm-hibernate4-spring-boot:1.0.0.RC3'

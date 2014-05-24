@@ -11,9 +11,10 @@ import java.util.Map;
  */
 
 @Controller
+@RequestMapping("/sample")
 public class SampleActuatorUIApplication {
 
-    @RequestMapping("/")
+    @RequestMapping
     public String home(Map<String, Object> model) {
         model.put("message", "Hello world");
         model.put("title", "Hello home");
@@ -22,7 +23,6 @@ public class SampleActuatorUIApplication {
     }
 
     @RequestMapping("foo")
-
     public String foo() {
         throw new RuntimeException("Expected exception in controller");
     }

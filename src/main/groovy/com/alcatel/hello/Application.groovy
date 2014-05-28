@@ -18,6 +18,7 @@ import javax.sql.DataSource
 @EnableAutoConfiguration()
 // file that contains the properties
 @PropertySource("classpath:proxool.properties")
+@groovy.util.logging.Slf4j
 class Application {
 
     @Autowired

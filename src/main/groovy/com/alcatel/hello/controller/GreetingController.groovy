@@ -23,9 +23,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST
  */
 
 @RestController
+@groovy.util.logging.Slf4j
 class GreetingController {
-
-    private static Logger log = LoggerFactory.getLogger(GreetingController)
 
     @RequestMapping(value = "/person/greet", method = GET)
     String greet(String firstName) {

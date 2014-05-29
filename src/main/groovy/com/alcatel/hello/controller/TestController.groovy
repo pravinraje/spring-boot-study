@@ -15,12 +15,12 @@ class TestController {
     final AtomicLong counter = new AtomicLong()
 
     @RequestMapping("/test")
-    public String test() {
+    String test() {
         "Hello test"
     }
 
     @RequestMapping("/testGreeting")
-    public @ResponseBody
+    @ResponseBody
     Greeting testGreeting(@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
         new Greeting(id: counter.incrementAndGet(), content: String.format(template, name))
     }
